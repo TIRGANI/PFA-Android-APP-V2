@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+<<<<<<< HEAD
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_dashboard" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_ferm" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_profile" />
+=======
+            android:icon="@drawable/ic_dashboard"
+            android:title="@string/menu_dashboard" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_ferm"
+            android:title="@string/menu_ferm" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_profil"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_map"
+            android:icon="@drawable/ic_map"
+            android:title="Map" />
+>>>>>>> 71bbbd0 (17-05-22-v1)
+    </group>
+</menu>

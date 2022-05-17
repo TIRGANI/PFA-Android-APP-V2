@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="emsi.pfa.smart_wattering_v0.ui.dashboard.DashboardFragment"
+        android:label="@string/menu_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="emsi.pfa.smart_wattering_v0.ui.ferm.FermFragment"
+        android:label="@string/menu_ferm"
+        tools:layout="@layout/fragment_ferm" >
+        <action
+            android:id="@+id/navigToParcell"
+            app:destination="@+id/nav_parcelle"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            />
+        <action
+            android:id="@+id/navigTodetaillFerm"
+            app:destination="@+id/nav_detaillFerme"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_detaillFerme"
+        android:name="emsi.pfa.smart_wattering_v0.ui.detaill.detaillFerme"
+        android:label="Temperatur du ferme par jour"
+        tools:layout="@layout/fragment_detaillferme" />
+    <fragment
+        android:id="@+id/nav_detaillParcelle"
+        android:name="emsi.pfa.smart_wattering_v0.ui.detaill.DetailleParcelle"
+        android:label="Detail Parcelle "
+        tools:layout="@layout/fragment_detailparcelle" />
+    <fragment
+        android:id="@+id/nav_listPlant"
+        android:name="emsi.pfa.smart_wattering_v0.ui.plante.PlanteFragment"
+        android:label="List Plantages :"
+        tools:layout="@layout/fragment_plante" />
+
+    <fragment
+        android:id="@+id/nav_parcelle"
+        android:name="emsi.pfa.smart_wattering_v0.ui.parcelle.ParcelleFragement"
+        android:label="Parcelle"
+        tools:layout="@layout/fragement_parcelle" >
+        <action
+            android:id="@+id/navToDetaillParcelle"
+            app:destination="@+id/nav_detaillParcelle"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            />
+        <action
+            android:id="@+id/navToListPlant"
+            app:destination="@+id/nav_listPlant"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="emsi.pfa.smart_wattering_v0.ui.profile.ProfileFragment"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/fragment_profile" />
+
+</navigation>
